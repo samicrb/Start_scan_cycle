@@ -1,7 +1,7 @@
 {
     "name": "Optimax",
     "packageName": "com.optimax.startscancycle",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "sdkVersion": "3",
     "icon": "assets/images/icon.png",
     "drscModulePackageFile": "drsc_com.optimax.startscancycle.dm",

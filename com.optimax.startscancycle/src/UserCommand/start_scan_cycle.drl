@@ -2,11 +2,13 @@ def start_scan_cycle():
     mwait()
     set_modbus_slave(128, 1)
     wait(0.1)
+
     while True:
         scanfin = get_modbus_slave(129)
         if scanfin == 64:    # Check if value 64 is set
             break
         wait(0.1)
+
     set_modbus_slave(129, 0)
     wait(0.1)
     set_modbus_slave(128, 0)
