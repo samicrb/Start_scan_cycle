@@ -9,7 +9,7 @@ import {
 
 import programDrl from "./UserCommand/start_scan_cycle.drl";
 
-export default class StarScanCycleService extends ModuleService {
+export default class StartScanCycleService extends ModuleService {
 
     onBind(msg: Message, ch: IModuleChannel): boolean {
         const pm = this.moduleContext.getSystemManager(Context.PROGRAM_MANAGER) as IProgramManager;

@@ -14,7 +14,7 @@
         },
         {
             "name": "Start Scan Cycle",
-            "id": "star_scan_cycle",
+            "id": "start_scan_cycle",
             "messageFilters": [
                 {
                     "action": "com.dart.module.taskeditor.action.USER_COMMAND",

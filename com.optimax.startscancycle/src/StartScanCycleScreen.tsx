@@ -2,7 +2,7 @@ import React from 'react';
 import { ModuleScreen, IModuleChannel, Message } from 'dart-api';
 import { Typography, ThemeProvider } from '@mui/material';
 
-export default class StarScanCycleScreen extends ModuleScreen {
+export default class StartScanCycleScreen extends ModuleScreen {
 
   /** Enregistre les événements requis par le Task Editor */
   onBind(message: Message, channel: IModuleChannel): boolean {
