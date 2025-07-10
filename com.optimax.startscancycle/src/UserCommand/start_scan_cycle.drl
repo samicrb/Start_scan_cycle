@@ -1,4 +1,3 @@
-from DRCF import *
 def start_scan_cycle():
     mwait()
     set_modbus_slave(128, 1)

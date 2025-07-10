@@ -1,9 +1,4 @@
-from DRCF import * 
-
 def set_values (v0, v1, v2, v3, v4, v5, v6, v7, v8, v9):
-    """
-    Set values for the scan cycle.
-    """
     set_modbus_slave(130,v0)
     wait(0.1)
     set_modbus_slave(131,v1)    

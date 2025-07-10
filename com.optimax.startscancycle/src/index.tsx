@@ -29,10 +29,10 @@ class Module extends BaseModule {
         }
         
         //for pip screen that opened when usr clicked the property tab in task editor module of dart-platform.
-        if (componentId === 'StartScanCycleScreen') {
+        if (componentId === 'start_scan_cycle') {
             return StartScanCycleScreen;
         }
-        if (componentId === 'SetValuesScreen') {
+        if (componentId === 'set_values') {
             return SetValuesScreen;
         }
         return null;
