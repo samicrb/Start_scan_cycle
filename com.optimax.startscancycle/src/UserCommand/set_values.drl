@@ -1,0 +1,26 @@
+from DRCF import * 
+
+def set_values (v0, v1, v2, v3, v4, v5, v6, v7, v8, v9):
+    """
+    Set values for the scan cycle.
+    """
+    set_modbus_slave(130,v0)
+    wait(0.1)
+    set_modbus_slave(131,v1)    
+    wait(0.1)
+    set_modbus_slave(132,v2)
+    wait(0.1)   
+    set_modbus_slave(133,v3)
+    wait(0.1)
+    set_modbus_slave(134,v4)
+    wait(0.1)
+    set_modbus_slave(135,v5)
+    wait(0.1)
+    set_modbus_slave(136,v6)
+    wait(0.1)
+    set_modbus_slave(137,v7)
+    wait(0.1)
+    set_modbus_slave(138,v8)
+    wait(0.1)
+    set_modbus_slave(139,v9)
+    wait(0.1)

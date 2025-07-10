@@ -1,0 +1,58 @@
+{
+    "main": "index.bundle.js",
+    "type": "USER_COMMAND",
+    "screens": [
+        {
+            "name": "Main Screen",
+            "id": "MainScreen",
+            "messageFilters": [
+                {
+                    "action": "com.dart.module.taskeditor.action.MAIN",
+                    "category": "dart.message.category.SCREEN"
+                }
+            ]
+        },
+        {
+            "name": "Start Scan Cycle",
+            "id": "star_scan_cycle",
+            "messageFilters": [
+                {
+                    "action": "com.dart.module.taskeditor.action.USER_COMMAND",
+                    "category": "dart.message.category.PIP_SCREEN"
+                }
+            ]
+        },
+        {
+            "name": "Set Values",
+            "id": "set_values",
+            "messageFilters": [
+                {
+                    "action": "com.dart.module.taskeditor.action.USER_COMMAND",
+                    "category": "dart.message.category.PIP_SCREEN"
+                }
+            ]
+        }
+    ],
+    "services": [
+        {
+            "name": "Start Scan Cycle Service",
+            "id": "start_scan_cycle",
+            "messageFilters": [
+                {
+                    "action": "com.dart.module.taskeditor.action.USER_COMMAND",
+                    "category": "dart.message.category.SERVICE"
+                }
+            ]
+        },
+        {
+            "name": "Set Values",
+            "id": "set_values",
+            "messageFilters": [
+                {
+                    "action": "com.dart.module.taskeditor.action.USER_COMMAND",
+                    "category": "dart.message.category.SERVICE"
+                }
+            ]
+        }
+    ]
+}

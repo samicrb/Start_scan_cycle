@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"jsx": "react",
+		"module": "commonjs",
+		"lib":["es2021", "DOM"],
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"paths": {
+			"dart-api": ["./libs/dart-api"]}
+	}
+}
