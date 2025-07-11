@@ -4,7 +4,7 @@
 */
 import {
   Context, ModuleService, IModuleChannel,
-  IProgramManager, ProgramSaveMode, Message
+  IProgramManager, ProgramSaveMode, Message, IDartFileSystem
 } from "dart-api";
 
 import programDrl from "./UserCommand/start_scan_cycle.drl";
@@ -13,6 +13,7 @@ export default class StartScanCycleService extends ModuleService {
 
     onBind(msg: Message, ch: IModuleChannel): boolean {
         const pm = this.moduleContext.getSystemManager(Context.PROGRAM_MANAGER) as IProgramManager;
+        const fileSystem = this.moduleContext.getSystemLibrary(Context.DART_FILE_SYSTEM) as IDartFileSystem;
 
         /*********
         *   1. Event "req_to_save_commands_def_as_sub_program"
@@ -23,7 +24,7 @@ export default class StartScanCycleService extends ModuleService {
         /* 1. Sub-Program : un seul enregistrement par tâche */
         ch.receive("req_to_save_commands_def_as_sub_program",
             async ({ programName }) => {
-                const code = `from DRCF import *\r\n${programDrl}`;
+                const code = await fileSystem.readFile(this.moduleContext, programDrl);
                 const ok = await pm.saveSubProgram(ProgramSaveMode.SAVE, programName, code);
                 ch.send("req_to_save_commands_def_as_sub_program", ok);
         });

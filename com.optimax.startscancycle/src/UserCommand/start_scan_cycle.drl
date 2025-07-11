@@ -1,11 +1,13 @@
+from DRCF import *
+
 def start_scan_cycle():
-    mwait()
+    mwait(0)
     set_modbus_slave(128, 1)
     wait(0.1)
 
     while True:
         scanfin = get_modbus_slave(129)
-        if scanfin == 64:    # Check if value 64 is set
+        if scanfin == 64:    # fin de scan
             break
         wait(0.1)
 
